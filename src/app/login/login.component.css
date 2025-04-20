@@ -1,0 +1,132 @@
+:host {
+  background:  #d8dfef !important;
+  height: 100vh !important;
+  width: 100vw !important;
+  display: flex; /* Use flexbox to center the container */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+
+}
+
+/* Base container for layout */
+.new-login-container {
+  display: flex;
+
+  height: 75%;
+  max-width: 1200px;
+  background-color: #fff; /* Keep the white background for the container */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  overflow: hidden; /* To keep the content within rounded corners*/
+}
+
+/* Left Column */
+.login-form-column {
+  background-color: #f0f4ff;
+  flex: 1 1 40%; /* Take up to 40% of width, can grow/shrink*/
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Right Column */
+.graphic-column {
+  flex: 1 1 60%; /* Take remaining 60% of width*/
+  background-color: #f0f4ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow: hidden;   /* For images, hide some part of image if needed*/
+}
+
+.login-graphic {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Logo */
+.login-logo {
+  max-width: 100%;
+  margin-top: 30px;
+}
+
+/* Welcome Text Styling*/
+.welcome-heading {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.signin-text {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* Form spacing */
+.new-login-form .form-group {
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+.new-input {
+  width: 52%;
+  border:1px solid #ccc;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 14px;
+  height: auto;
+  box-shadow: none;
+  background-color: #fff !important;
+}
+
+.new-input::placeholder {
+  color: #999;
+  font-size: 14px;
+}
+
+[placeholder]::-webkit-input-placeholder {
+  opacity: 1 !important;
+}
+
+/* Login Button */
+.new-login-button {
+  background-color: #00aaff;
+  border-color: #00aaff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 12px;
+  border-radius: 25px;
+  margin-top: 10px;
+  text-transform: none;
+  transition: background-color 0.2s ease;
+  border: none;
+}
+
+.new-login-button:hover {
+  background-color: #0088cc; /* Darker blue on hover */
+  border-color: #0088cc;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .new-login-container{
+    flex-direction: column;
+    margin: 10px;
+    max-width: 100%;
+  }
+
+  .graphic-column {
+    display: none;   /* hide image on small screens */
+  }
+
+  .login-form-column {
+    padding: 30px 20px;
+    flex-basis: auto;
+  }
+}
